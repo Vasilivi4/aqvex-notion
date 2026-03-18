@@ -1,0 +1,96 @@
+.before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.ba-side {
+    position: relative;
+    aspect-ratio: 3/4;
+    background: #2A1D0B;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 12px;
+}
+
+.ba-img-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ba-neck-icon {
+    font-size: 64px;
+}
+
+.ba-label {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px;
+}
+
+.ba-before .ba-label {
+    background: rgba(0, 0, 0, 0.6);
+    color: #aaa;
+}
+
+.ba-after .ba-label {
+    background: rgba(201, 169, 110, 0.85);
+    color: var(--dark);
+}
+
+.ba-before .ba-img-placeholder {
+    filter: grayscale(50%) brightness(0.7);
+}
+
+.ba-before-text {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.3);
+    margin-top: 4px;
+    text-align: center;
+}
+
+.ba-after-text {
+    font-size: 11px;
+    color: var(--gold);
+    margin-top: 4px;
+    text-align: center;
+}
+
+.ba-caption {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.result-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.result-chip {
+    background: rgba(201, 169, 110, 0.12);
+    border: 1px solid rgba(201, 169, 110, 0.35);
+    color: var(--gold-light);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: 20px;
+}

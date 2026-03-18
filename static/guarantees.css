@@ -1,0 +1,36 @@
+.guarantee-sec {
+    background: var(--cream);
+}
+
+.guarantee-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.guarantee-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 18px 14px;
+    text-align: center;
+    border: 1px solid #EDE3D6;
+    box-shadow: 0 2px 12px rgba(201, 169, 110, 0.08);
+}
+
+.guarantee-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.guarantee-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 4px;
+}
+
+.guarantee-desc {
+    font-size: 11px;
+    color: var(--text-light);
+    line-height: 1.5;
+}

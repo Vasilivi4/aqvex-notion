@@ -1,0 +1,20 @@
+.solution-sec {
+    background: linear-gradient(160deg, #1A1208 0%, #2D1E08 100%);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.solution-sec .section-title {
+    color: var(--white);
+}
+
+.solution-sec .gold-line {
+    margin-bottom: 12px;
+}
+
+.solution-lead {
+    color: var(--gold-light);
+    font-size: 15px;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}

@@ -1,0 +1,19 @@
+section {
+    padding: 40px 20px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    text-align: center;
+    color: var(--dark);
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+
+.section-sub {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 14px;
+    margin-bottom: 28px;
+}

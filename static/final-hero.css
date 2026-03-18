@@ -1,0 +1,81 @@
+.final-hero {
+    background: linear-gradient(160deg, #2D1E08 0%, #1A1208 100%);
+    padding: 44px 24px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.final-hero::before {
+    content: '✨';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 40px;
+    opacity: 0.2;
+}
+
+.final-hero::after {
+    content: '✨';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 40px;
+    opacity: 0.2;
+}
+
+.final-hero .section-title {
+    color: var(--white);
+    margin-bottom: 4px;
+}
+
+.final-hero .section-sub {
+    color: var(--gold-light);
+    margin-bottom: 20px;
+}
+
+.final-price-block {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(201, 169, 110, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.urgency-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(192, 57, 43, 0.15);
+    border: 1px solid rgba(192, 57, 43, 0.3);
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+}
+
+.urgency-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--red);
+    border-radius: 50%;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0.3
+    }
+}
+
+.urgency-text {
+    color: #FF8A80;
+    font-size: 12px;
+    font-weight: 700;
+}

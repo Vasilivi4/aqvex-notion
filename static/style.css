@@ -1,0 +1,32 @@
+:root {
+    --gold: #C9A96E;
+    --gold-light: #E8D5B0;
+    --gold-dark: #9A7840;
+    --cream: #FDF8F2;
+    --dark: #1A1208;
+    --text: #3D2E18;
+    --text-light: #7A6548;
+    --red: #C0392B;
+    --red-bg: #FFF5F5;
+    --green: #27AE60;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    max-width: 480px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.display {
+    font-family: 'Playfair Display', serif;
+}

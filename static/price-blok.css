@@ -1,0 +1,58 @@
+.price-block {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(201, 169, 110, 0.3);
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+}
+
+.price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.price-old {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: line-through;
+    font-weight: 600;
+}
+
+.price-new {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: var(--gold);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.price-currency {
+    font-size: 18px;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.discount-badge {
+    display: inline-block;
+    background: var(--red);
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 6px;
+}
+
+.bonus-text {
+    color: var(--gold-light);
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(201, 169, 110, 0.2);
+}
+
+.bonus-text span {
+    color: var(--gold);
+}

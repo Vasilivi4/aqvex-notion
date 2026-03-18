@@ -1,0 +1,57 @@
+.btn-cta {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #E8B84B 0%, #C9A96E 50%, #9A7840 100%);
+    color: var(--dark);
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    text-align: center;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 24px rgba(201, 169, 110, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn-cta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-20deg);
+    animation: shine 2.5s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    30% {
+        left: 120%;
+    }
+
+    100% {
+        left: 120%;
+    }
+}
+
+.btn-cta:active {
+    transform: scale(0.98);
+}
+
+.btn-sub {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 11px;
+    text-align: center;
+    margin-top: 8px;
+}
