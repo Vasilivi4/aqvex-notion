@@ -11,7 +11,7 @@ neck-mask-landing/
 ├── images                        ← картинки
 ├── static                        ← стиль
 ├── LICENSE                       ← лецензия
-├── neck-mask-landing.html        ← весь лендинг (один файл)
+├── index.html        ← весь лендинг (один файл)
 └── README.md                     ← этот файл
 ```
 
