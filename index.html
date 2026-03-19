@@ -11,6 +11,7 @@
     rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="static/after.css">
   <link rel="stylesheet" type="text/css" href="static/animations.css">
+  <link rel="stylesheet" type="text/css" href="static/announcement-bar.css">
   <link rel="stylesheet" type="text/css" href="static/bar.css">
   <link rel="stylesheet" type="text/css" href="static/before-after.css">
   <link rel="stylesheet" type="text/css" href="static/benefits.css">
@@ -24,6 +25,8 @@
   <link rel="stylesheet" type="text/css" href="static/quarantees.css">
   <link rel="stylesheet" type="text/css" href="static/hero.css">
   <link rel="stylesheet" type="text/css" href="static/how-to-use.css">
+  <link rel="stylesheet" type="text/css" href="static/modal.css">
+  <link rel="stylesheet" type="text/css" href="static/on-page-from-inputs.css">
   <link rel="stylesheet" type="text/css" href="static/order-process.css">
   <link rel="stylesheet" type="text/css" href="static/price-blok.css">
   <link rel="stylesheet" type="text/css" href="static/problem-section.css">
@@ -32,26 +35,39 @@
   <link rel="stylesheet" type="text/css" href="static/solution-section.css">
   <link rel="stylesheet" type="text/css" href="static/stock-bar.css">
   <link rel="stylesheet" type="text/css" href="static/style.css">
+  <link rel="stylesheet" type="text/css" href="static/success-screen.css">
   <link rel="stylesheet" type="text/css" href="static/utility.css">
 </head>
 
 <body>
-  <div class="announce-bar">🚚 Доставка по всему Узбекистану · Оплата при получении · -50% только сегодня </div>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announce-bar">
+    🚚 Доставка по всему Узбекистану · Оплата при получении · -50% только сегодня
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+     СЕКЦИЯ 1: ПЕРВЫЙ ЭКРАН
+════════════════════════════════════════════ -->
   <section class="hero" id="top">
     <div class="hero-tag">⭐ Хит продаж · 10 штук в упаковке</div>
+
     <h1 class="display">Маска для шеи<br><em>ЛИФТ</em></h1>
     <p class="hero-sub">Омолаживающая. Результат видно уже через 7 дней</p>
+
     <div class="result-pills">
       <div class="pill">
-        <div class="dot"></div>Разглаживает морщины
+        <div class="dot"></div> Разглаживает морщины
       </div>
       <div class="pill">
-        <div class="dot"></div>Подтягивает кожу
+        <div class="dot"></div> Подтягивает кожу
       </div>
       <div class="pill">
-        <div class="dot"></div>Лифтинг-эффект
+        <div class="dot"></div> Лифтинг-эффект
       </div>
     </div>
+
+    <!-- COUNTDOWN -->
     <div class="countdown-wrap">
       <div class="countdown-label">⏳ Цена -50% закончится через:</div>
       <div class="countdown">
@@ -71,202 +87,242 @@
         </div>
       </div>
     </div>
+
+    <!-- PRICE BLOCK -->
     <div class="price-block">
-      <div class="price-row"><span class="price-old">200 000 сум</span><span class="discount-badge">-50%</span>
+      <div class="price-row">
+        <span class="price-old">200 000 сум</span>
+        <span class="discount-badge">-50%</span>
       </div>
-      <div class="price-row"><span class="price-new">149 000</span><span class="price-currency">сум</span></div>
-      <div class="bonus-text">🎁 Купи 2 упаковки — <span>3-я в подарок !</span></div>
+      <div class="price-row">
+        <span class="price-new">149 000</span>
+        <span class="price-currency">сум</span>
+      </div>
+      <div class="bonus-text">🎁 Купи 2 упаковки — <span>3-я в подарок!</span></div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:14px;"><input type="text"
-        placeholder="Ваше имя"
-        style="padding:15px 16px;border-radius:12px;border:1.5px solid rgba(201,169,110,0.4);background:rgba(255,255,255,0.07);color:white;font-family:'Nunito',sans-serif;font-size:15px;width:100%;outline:none;"><input
-        type="tel" placeholder="Номер телефона (+998)"
-        style="padding:15px 16px;border-radius:12px;border:1.5px solid rgba(201,169,110,0.4);background:rgba(255,255,255,0.07);color:white;font-family:'Nunito',sans-serif;font-size:15px;width:100%;outline:none;">
-    </div><a href="#" class="btn-cta" onclick="return false;">🛒 ПОЛУЧИТЬ СО СКИДКОЙ 50% </a>
-    <p class="btn-sub">Нажимая кнопку,
-      вы соглашаетесь на обработку персональных данных</p>
+
+    <!-- FORM -->
+    <div id="heroForm" style="display:flex;flex-direction:column;gap:10px;margin-bottom:14px;">
+      <input id="heroName" type="text" placeholder="Ваше имя" class="form-input" autocomplete="name">
+      <input id="heroPhone" type="tel" placeholder="+998 __ ___ __ __" class="form-input" autocomplete="tel">
+    </div>
+
+    <button class="btn-cta" onclick="submitForm('heroName','heroPhone')">
+      🛒 ПОЛУЧИТЬ СО СКИДКОЙ 50%
+    </button>
+    <p class="btn-sub">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+
+    <!-- STOCK BAR -->
     <div class="stock-bar">
-      <div class="stock-top"><span class="stock-label">Осталось на складе:</span><span class="stock-count">⚠️
-          Только 9 штук !</span></div>
+      <div class="stock-top">
+        <span class="stock-label">Осталось на складе:</span>
+        <span class="stock-count">⚠️ Только 9 штук!</span>
+      </div>
       <div class="stock-track">
         <div class="stock-fill"></div>
       </div>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════
+     СЕКЦИЯ 2: ПРОБЛЕМА
+════════════════════════════════════════════ -->
   <section class="problem-sec fade-in">
     <div class="gold-line"></div>
     <h2 class="section-title display">Узнаёте<br>себя в этом?</h2>
     <p class="section-sub">С возрастом кожа шеи стареет быстрее всего — и это видно</p>
+
     <div class="problem-items">
-      <div class="problem-item"><span class="problem-icon">😔</span>
-        <div class="problem-text"><strong>Морщины и складки на шее</strong>— кожа выглядит старше лица на 10 лет
-        </div>
+      <div class="problem-item">
+        <span class="problem-icon">😔</span>
+        <div class="problem-text"><strong>Морщины и складки на шее</strong> — кожа выглядит старше лица на 10 лет</div>
       </div>
-      <div class="problem-item"><span class="problem-icon">😟</span>
-        <div class="problem-text"><strong>Дряблость и обвисание</strong>— нет тонуса,
-          контур «уплыл»</div>
+      <div class="problem-item">
+        <span class="problem-icon">😟</span>
+        <div class="problem-text"><strong>Дряблость и обвисание</strong> — нет тонуса, контур «уплыл»</div>
       </div>
-      <div class="problem-item"><span class="problem-icon">😞</span>
-        <div class="problem-text"><strong>Пигментные пятна и сухость</strong>— кожа тускнеет и шелушится</div>
+      <div class="problem-item">
+        <span class="problem-icon">😞</span>
+        <div class="problem-text"><strong>Пигментные пятна и сухость</strong> — кожа тускнеет и шелушится</div>
       </div>
-      <div class="problem-item"><span class="problem-icon">💸</span>
-        <div class="problem-text"><strong>Дорогие процедуры не помогают</strong>— салоны опустошают кошелёк,
-          а эффект временный</div>
+      <div class="problem-item">
+        <span class="problem-icon">💸</span>
+        <div class="problem-text"><strong>Дорогие процедуры не помогают</strong> — салоны опустошают кошелёк, а эффект
+          временный</div>
       </div>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════
+     СЕКЦИЯ 3: РЕШЕНИЕ + ДО/ПОСЛЕ
+════════════════════════════════════════════ -->
   <section class="solution-sec fade-in">
     <div class="gold-line"></div>
-    <h2 class="section-title display">Решение,
-      <br>которое работает
-    </h2>
-    <p class="solution-lead">Маска для шеи ЛИФТ создана специально для воздействия на зону шеи — туда,
-      куда обычные кремы не добираются</p>
+    <h2 class="section-title display">Решение,<br>которое работает</h2>
+    <p class="solution-lead">Маска для шеи ЛИФТ создана специально для воздействия на зону шеи — туда, куда обычные
+      кремы не добираются</p>
+
+    <!-- BEFORE AFTER -->
     <div class="before-after">
       <div class="ba-side ba-before">
-        <div class="ba-img-placeholder"><span class="ba-neck-icon">🙍‍♀️</span><span
-            style="color:rgba(255,255,255,0.3);font-size:11px;">Морщины,
-            дряблость</span></div>
+        <div class="ba-img-placeholder">
+          <span class="ba-neck-icon">🙍‍♀️</span>
+          <span style="color:rgba(255,255,255,0.3);font-size:11px;">Морщины, дряблость</span>
+        </div>
         <div class="ba-label">ДО</div>
       </div>
       <div class="ba-side ba-after">
-        <div class="ba-img-placeholder"><span class="ba-neck-icon">🧖‍♀️</span><span
-            style="color:var(--gold);font-size:11px;">Гладкая,
-            упругая</span></div>
+        <div class="ba-img-placeholder">
+          <span class="ba-neck-icon">🧖‍♀️</span>
+          <span style="color:var(--gold);font-size:11px;">Гладкая, упругая</span>
+        </div>
         <div class="ba-label">ПОСЛЕ</div>
       </div>
     </div>
     <p class="ba-caption">*Результаты после 7 дней применения</p>
+
     <div class="result-chips">
       <div class="result-chip">✔ −30% морщин</div>
-      <div class="result-chip">✔+40% упругости</div>
+      <div class="result-chip">✔ +40% упругости</div>
       <div class="result-chip">✔ Видно через 7 дней</div>
       <div class="result-chip">✔ Без болезненных процедур</div>
-      <div class="result-chip">✔ Дома,
-        за 15 минут</div>
-    </div><a href="#" class="btn-cta" onclick="return false;"
-      style="background:linear-gradient(135deg,#E8B84B,#9A7840);margin-top:8px;">✨ ХОЧУ ТАКОЙ РЕЗУЛЬТАТ </a>
+      <div class="result-chip">✔ Дома, за 15 минут</div>
+    </div>
+
+    <button class="btn-cta" onclick="openModal()"
+      style="background:linear-gradient(135deg,#E8B84B,#9A7840);margin-top:8px;">
+      ✨ ХОЧУ ТАКОЙ РЕЗУЛЬТАТ
+    </button>
   </section>
+
+  <!-- CTA STRIP 1 -->
   <div class="cta-strip fade-in">
     <div class="cta-strip-title display">Успей по цене -50%</div>
-    <div class="cta-strip-sub">Акция действует только сегодня · Осталось 9 упаковок</div><a href="#" class="btn-dark"
-      onclick="return false;">🎁 Заказать+3-я в подарок</a>
+    <div class="cta-strip-sub">Акция действует только сегодня · Осталось 9 упаковок</div>
+    <button class="btn-dark" onclick="openModal()">🎁 Заказать + 3-я в подарок</button>
   </div>
+
+  <!-- ═══════════════════════════════════════════
+     СЕКЦИЯ 4: ПРЕИМУЩЕСТВА
+════════════════════════════════════════════ -->
   <section class="benefits-sec fade-in">
     <div class="gold-line"></div>
     <h2 class="section-title display">Почему маска<br>ЛИФТ работает</h2>
     <p class="section-sub">Передовая формула специально для зрелой кожи 35+</p>
+
     <div class="benefit-cards">
       <div class="benefit-card">
         <div class="benefit-icon-wrap">🧬</div>
         <div>
           <div class="benefit-title">Пептидный лифтинг</div>
-          <div class="benefit-desc">Активные пептиды проникают глубоко и стимулируют выработку коллагена —
-            кожа подтягивается изнутри</div>
+          <div class="benefit-desc">Активные пептиды проникают глубоко и стимулируют выработку коллагена — кожа
+            подтягивается изнутри</div>
         </div>
       </div>
       <div class="benefit-card">
         <div class="benefit-icon-wrap">💧</div>
         <div>
           <div class="benefit-title">Глубокое увлажнение</div>
-          <div class="benefit-desc">Гиалуроновая кислота удерживает влагу 48 часов,
-            устраняя сухость и шелушение</div>
+          <div class="benefit-desc">Гиалуроновая кислота удерживает влагу 48 часов, устраняя сухость и шелушение</div>
         </div>
       </div>
       <div class="benefit-card">
         <div class="benefit-icon-wrap">🌿</div>
         <div>
           <div class="benefit-title">Натуральные компоненты</div>
-          <div class="benefit-desc">Экстракт золотого шелка,
-            масло ши и ретинол — только проверенные ингредиенты без вредной химии</div>
+          <div class="benefit-desc">Экстракт золотого шелка, масло ши и ретинол — только проверенные ингредиенты без
+            вредной химии</div>
         </div>
       </div>
       <div class="benefit-card">
         <div class="benefit-icon-wrap">⏱️</div>
         <div>
           <div class="benefit-title">Всего 15 минут</div>
-          <div class="benefit-desc">Наденьте маску,
-            отдохните и снимите — никаких сложных процедур. Результат накапливается с каждым применением
-          </div>
+          <div class="benefit-desc">Наденьте маску, отдохните и снимите — никаких сложных процедур. Результат
+            накапливается с каждым применением</div>
         </div>
       </div>
       <div class="benefit-card">
         <div class="benefit-icon-wrap">✅</div>
         <div>
           <div class="benefit-title">Дерматологически протестировано</div>
-          <div class="benefit-desc">Гипоаллергенный состав,
-            одобрен дерматологами,
-            подходит для чувствительной кожи</div>
+          <div class="benefit-desc">Гипоаллергенный состав, одобрен дерматологами, подходит для чувствительной кожи
+          </div>
         </div>
       </div>
       <div class="benefit-card">
         <div class="benefit-icon-wrap">📦</div>
         <div>
           <div class="benefit-title">10 масок в упаковке</div>
-          <div class="benefit-desc">Полный курс для видимого результата — хватит на 5 недель при применении
-            2 раза в неделю</div>
+          <div class="benefit-desc">Полный курс для видимого результата — хватит на 5 недель при применении 2 раза в
+            неделю</div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════
+     СЕКЦИЯ 5: КАК ПРИМЕНЯТЬ
+════════════════════════════════════════════ -->
   <section class="how-sec fade-in">
     <div class="gold-line"></div>
     <h2 class="section-title display">Как использовать</h2>
     <p class="section-sub">Простые шаги — профессиональный результат дома</p>
+
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
         <div class="step-content">
           <div class="step-title">Очистите кожу шеи</div>
-          <div class="step-desc">Умойтесь или протрите шею мицеллярной водой. Кожа должна быть сухой и
-            чистой</div>
+          <div class="step-desc">Умойтесь или протрите шею мицеллярной водой. Кожа должна быть сухой и чистой</div>
         </div>
       </div>
       <div class="step">
         <div class="step-num">2</div>
         <div class="step-content">
           <div class="step-title">Наденьте маску</div>
-          <div class="step-desc">Откройте пакетик,
-            приложите маску к шее,
-            закрепите удобные завязки</div>
+          <div class="step-desc">Откройте пакетик, приложите маску к шее, закрепите удобные завязки</div>
         </div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <div class="step-content">
           <div class="step-title">Подождите 15–20 минут</div>
-          <div class="step-desc">Отдохните,
-            посмотрите сериал — маска работает сама,
-            пока вы отдыхаете</div>
+          <div class="step-desc">Отдохните, посмотрите сериал — маска работает сама, пока вы отдыхаете</div>
         </div>
       </div>
       <div class="step">
         <div class="step-num">4</div>
         <div class="step-content">
           <div class="step-title">Снимите и вотрите остаток</div>
-          <div class="step-desc">Аккуратно снимите маску. Остатки сыворотки нежно вотрите в кожу — не
-            смывайте</div>
+          <div class="step-desc">Аккуратно снимите маску. Остатки сыворотки нежно вотрите в кожу — не смывайте</div>
         </div>
       </div>
       <div class="step">
         <div class="step-num">✦</div>
         <div class="step-content">
           <div class="step-title">Повторяйте 2–3 раза в неделю</div>
-          <div class="step-desc">Курс 5 недель=видимый лифтинг-результат,
-            который держится месяцами</div>
+          <div class="step-desc">Курс 5 недель = видимый лифтинг-результат, который держится месяцами</div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- CTA STRIP 2 -->
   <div class="cta-strip fade-in">
     <div class="cta-strip-title display">Начни курс прямо сейчас</div>
-    <div class="cta-strip-sub">10 масок+бесплатная доставка по Узбекистану</div><a href="#" class="btn-dark"
-      onclick="return false;">📞 Оставить заявку</a>
+    <div class="cta-strip-sub">10 масок + бесплатная доставка по Узбекистану</div>
+    <button class="btn-dark" onclick="openModal()">📞 Оставить заявку</button>
   </div>
+
+  <!-- ═══════════════════════════════════════════
+     СЕКЦИЯ 6: ОТЗЫВЫ
+════════════════════════════════════════════ -->
   <section class="reviews-sec fade-in">
     <div class="gold-line"></div>
     <h2 class="section-title display">Что говорят<br>наши клиентки</h2>
     <p class="section-sub">Более 3 500 довольных покупательниц по всему Узбекистану</p>
+
     <div class="reviews">
       <div class="review-card">
         <div class="review-header">
@@ -277,11 +333,11 @@
             <div class="stars">★★★★★</div>
           </div>
         </div>
-        <div class="review-text">«Я скептически относилась,
-          но подруга уговорила попробовать. После 2-й недели муж спросил — ты что-то сделала с шеей?
-          Она стала намного моложе выглядеть. Заказала ещё 2 упаковки !»</div><span class="review-tag">✓
-          Проверенный покупатель</span>
+        <div class="review-text">«Я скептически относилась, но подруга уговорила попробовать. После 2-й недели муж
+          спросил — ты что-то сделала с шеей? Она стала намного моложе выглядеть. Заказала ещё 2 упаковки!»</div>
+        <span class="review-tag">✓ Проверенный покупатель</span>
       </div>
+
       <div class="review-card">
         <div class="review-header">
           <div class="reviewer-avatar">👩‍🦱</div>
@@ -291,11 +347,11 @@
             <div class="stars">★★★★★</div>
           </div>
         </div>
-        <div class="review-text">«До этого тратила деньги на салоны — по 300-400 тысяч за сеанс. Одна
-          упаковка за 149 тысяч дала лучший результат,
-          чем 3 похода. Сейчас использую вместо салона. Очень довольна !»</div><span class="review-tag">✓
-          Проверенный покупатель</span>
+        <div class="review-text">«До этого тратила деньги на салоны — по 300-400 тысяч за сеанс. Одна упаковка за 149
+          тысяч дала лучший результат, чем 3 похода. Сейчас использую вместо салона. Очень довольна!»</div>
+        <span class="review-tag">✓ Проверенный покупатель</span>
       </div>
+
       <div class="review-card">
         <div class="review-header">
           <div class="reviewer-avatar">👩‍🦳</div>
@@ -305,12 +361,11 @@
             <div class="stars">★★★★★</div>
           </div>
         </div>
-        <div class="review-text">«Мне 51 год,
-          морщины на шее были глубокие. Думала,
-          уже ничего не поможет. Но после полного курса — кожа стала заметно плотнее ! Ещё и удобно:
-          надела,
-          занимаешься домашними делами»</div><span class="review-tag">✓ Проверенный покупатель</span>
+        <div class="review-text">«Мне 51 год, морщины на шее были глубокие. Думала, уже ничего не поможет. Но после
+          полного курса — кожа стала заметно плотнее! Ещё и удобно: надела, занимаешься домашними делами»</div>
+        <span class="review-tag">✓ Проверенный покупатель</span>
       </div>
+
       <div class="review-card">
         <div class="review-header">
           <div class="reviewer-avatar">🧕</div>
@@ -320,73 +375,80 @@
             <div class="stars">★★★★★</div>
           </div>
         </div>
-        <div class="review-text">«Заказала акцию 2+1,
-          пришло быстро. Оплатила при получении — это очень удобно. Уже использую месяц,
-          шея подтянулась,
-          пигментные пятна стали светлее. Всем советую !»</div><span class="review-tag">✓ Проверенный
-          покупатель</span>
+        <div class="review-text">«Заказала акцию 2+1, пришло быстро. Оплатила при получении — это очень удобно. Уже
+          использую месяц, шея подтянулась, пигментные пятна стали светлее. Всем советую!»</div>
+        <span class="review-tag">✓ Проверенный покупатель</span>
       </div>
     </div>
+
+    <!-- Star summary -->
     <div
       style="background:#FFF9F0;border-radius:16px;padding:18px;margin-top:20px;text-align:center;border:1px solid #EDE3D6;">
       <div style="font-size:36px;color:#F4A800;letter-spacing:2px;">★★★★★</div>
-      <div style="font-family:'Playfair Display',serif;font-size:28px;color:var(--dark);font-weight:700;">
-        4.9 / 5</div>
-      <div style="font-size:13px;color:var(--text-light);margin-top:4px;">На основе 3 500+отзывов
-      </div>
+      <div style="font-family:'Playfair Display',serif;font-size:28px;color:var(--dark);font-weight:700;">4.9 / 5</div>
+      <div style="font-size:13px;color:var(--text-light);margin-top:4px;">На основе 3 500+ отзывов</div>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════
+     СЕКЦИЯ 7: КАК СДЕЛАТЬ ЗАКАЗ
+════════════════════════════════════════════ -->
   <section class="order-sec fade-in">
     <div class="gold-line"></div>
     <h2 class="section-title display">Как оформить заказ</h2>
-    <p class="section-sub">Просто,
-      быстро и без предоплаты</p>
+    <p class="section-sub">Просто, быстро и без предоплаты</p>
+
     <div class="order-steps">
       <div class="order-step">
         <div class="order-icon-wrap">📝</div>
         <div>
           <div class="order-step-title">Оставьте заявку</div>
-          <div class="order-step-desc">Введите имя и номер телефона — займёт 30 секунд. Никаких
-            регистраций и паролей</div>
+          <div class="order-step-desc">Введите имя и номер телефона — займёт 30 секунд. Никаких регистраций и паролей
+          </div>
         </div>
       </div>
       <div class="order-step">
         <div class="order-icon-wrap">📞</div>
         <div>
           <div class="order-step-title">Звонок оператора</div>
-          <div class="order-step-desc">Наш менеджер перезвонит в течение 15 минут,
-            уточнит адрес доставки и ответит на вопросы</div>
+          <div class="order-step-desc">Наш менеджер перезвонит в течение 15 минут, уточнит адрес доставки и ответит на
+            вопросы</div>
         </div>
       </div>
       <div class="order-step">
         <div class="order-icon-wrap">🚚</div>
         <div>
           <div class="order-step-title">Доставка 1–2 дня</div>
-          <div class="order-step-desc">Доставляем по всему Узбекистану — Ташкент,
-            Самарканд,
-            Бухара,
-            Наманган и другие города</div>
+          <div class="order-step-desc">Доставляем по всему Узбекистану — Ташкент, Самарканд, Бухара, Наманган и другие
+            города</div>
         </div>
       </div>
       <div class="order-step">
         <div class="order-icon-wrap">💰</div>
         <div>
           <div class="order-step-title">Оплата при получении</div>
-          <div class="order-step-desc">Платите только когда товар у вас в руках. Никакой предоплаты
-            и рисков !</div>
+          <div class="order-step-desc">Платите только когда товар у вас в руках. Никакой предоплаты и рисков!</div>
         </div>
       </div>
     </div>
-    <div style="margin-top:28px;"><a href="#" class="btn-cta" onclick="return false;">🛒 ЗАКАЗАТЬ СО
-        СКИДКОЙ 50% </a>
-      <p style="color:rgba(255,255,255,0.4);font-size:11px;text-align:center;margin-top:8px;">
-        Осталось 9 упаковок · Акция заканчивается сегодня</p>
+
+    <div style="margin-top:28px;">
+      <button class="btn-cta" onclick="openModal()">
+        🛒 ЗАКАЗАТЬ СО СКИДКОЙ 50%
+      </button>
+      <p style="color:rgba(255,255,255,0.4);font-size:11px;text-align:center;margin-top:8px;">Осталось 9 упаковок ·
+        Акция заканчивается сегодня</p>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════
+     СЕКЦИЯ 8: ГАРАНТИИ
+════════════════════════════════════════════ -->
   <section class="guarantee-sec fade-in">
     <div class="gold-line"></div>
     <h2 class="section-title display">Ваша защита</h2>
     <p class="section-sub">Заказывайте без риска — мы отвечаем за каждый заказ</p>
+
     <div class="guarantee-grid">
       <div class="guarantee-card">
         <div class="guarantee-icon">💳</div>
@@ -396,119 +458,194 @@
       <div class="guarantee-card">
         <div class="guarantee-icon">🏆</div>
         <div class="guarantee-title">Оригинальный товар</div>
-        <div class="guarantee-desc">Официальный импортёр. Подлинная продукция с сертификатами
-        </div>
+        <div class="guarantee-desc">Официальный импортёр. Подлинная продукция с сертификатами</div>
       </div>
       <div class="guarantee-card">
         <div class="guarantee-icon">🔄</div>
         <div class="guarantee-title">Обмен и возврат</div>
-        <div class="guarantee-desc">30 дней на возврат,
-          если товар не подошёл — без вопросов</div>
+        <div class="guarantee-desc">30 дней на возврат, если товар не подошёл — без вопросов</div>
       </div>
       <div class="guarantee-card">
         <div class="guarantee-icon">📦</div>
         <div class="guarantee-title">Быстрая доставка</div>
-        <div class="guarantee-desc">1–2 дня по всему Узбекистану. Бесплатная доставка от заказа
-        </div>
+        <div class="guarantee-desc">1–2 дня по всему Узбекистану. Бесплатная доставка от заказа</div>
       </div>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════
+     СЕКЦИЯ 9: FAQ
+════════════════════════════════════════════ -->
   <section class="faq-sec fade-in">
     <div class="gold-line"></div>
     <h2 class="section-title display">Частые вопросы</h2>
     <p class="section-sub">Отвечаем на самые популярные</p>
+
     <div class="faq-items">
       <div class="faq-item">
         <div class="faq-q">Когда увижу первые результаты?</div>
-        <div class="faq-a">Первые изменения заметны уже после 3–5 применений — кожа становится
-          более увлажнённой и мягкой. Выраженный лифтинг-эффект и сглаживание морщин — через
-          7–14 дней регулярного использования.</div>
+        <div class="faq-a">Первые изменения заметны уже после 3–5 применений — кожа становится более увлажнённой и
+          мягкой. Выраженный лифтинг-эффект и сглаживание морщин — через 7–14 дней регулярного использования.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Маска подойдёт для чувствительной кожи?</div>
-        <div class="faq-a">Да. Состав гипоаллергенный,
-          одобрен дерматологами. Не содержит парабенов,
-          сульфатов и искусственных красителей. Подходит даже для самой чувствительной кожи.
-        </div>
+        <div class="faq-a">Да. Состав гипоаллергенный, одобрен дерматологами. Не содержит парабенов, сульфатов и
+          искусственных красителей. Подходит даже для самой чувствительной кожи.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Нужна ли предоплата?</div>
-        <div class="faq-a">Нет. Вы оплачиваете заказ только при получении от курьера. Никаких
-          переводов и предоплат — полная безопасность.</div>
+        <div class="faq-a">Нет. Вы оплачиваете заказ только при получении от курьера. Никаких переводов и предоплат —
+          полная безопасность.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Как долго хватит одной упаковки?</div>
-        <div class="faq-a">В упаковке 10 масок. При использовании 2 раза в неделю хватит на 5
-          недель — это полный курс для видимого результата. Многие наши клиентки затем покупают
-          ещё одну упаковку для поддержания эффекта.</div>
+        <div class="faq-a">В упаковке 10 масок. При использовании 2 раза в неделю хватит на 5 недель — это полный курс
+          для видимого результата. Многие наши клиентки затем покупают ещё одну упаковку для поддержания эффекта.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Акция 2+1 — как это работает?</div>
-        <div class="faq-a">Заказываете 2 упаковки — третья добавляется в подарок автоматически.
-          Итого получаете 30 масок по цене 20. Скажите оператору при звонке,
-          что хотите акцию 2+1.</div>
+        <div class="faq-a">Заказываете 2 упаковки — третья добавляется в подарок автоматически. Итого получаете 30 масок
+          по цене 20. Скажите оператору при звонке, что хотите акцию 2+1.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Доставляете ли в мой город?</div>
-        <div class="faq-a">Да,
-          доставляем по всему Узбекистану — включая Ташкент,
-          Самарканд,
-          Бухару,
-          Наманган,
-          Андижан,
-          Фергану,
-          Нукус и малые города. Сроки доставки 1–2 рабочих дня.</div>
+        <div class="faq-a">Да, доставляем по всему Узбекистану — включая Ташкент, Самарканд, Бухару, Наманган, Андижан,
+          Фергану, Нукус и малые города. Сроки доставки 1–2 рабочих дня.</div>
       </div>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════
+     СЕКЦИЯ 10: ФИНАЛЬНЫЙ ОФФЕР
+════════════════════════════════════════════ -->
   <section class="final-hero fade-in">
     <div style="margin-bottom:20px;">
       <div class="urgency-badge">
-        <div class="urgency-dot"></div><span class="urgency-text">⚠️ Осталось только 9
-          упаковок по акционной цене</span>
+        <div class="urgency-dot"></div>
+        <span class="urgency-text">⚠️ Осталось только 9 упаковок по акционной цене</span>
       </div>
     </div>
+
     <div class="gold-line"></div>
     <h2 class="section-title display">Последний шанс<br>взять со скидкой</h2>
     <p class="section-sub">Не откладывайте — завтра цена вернётся к 200 000 сум</p>
+
     <div class="final-price-block">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
-        <span style="color:rgba(255,255,255,0.5);font-size:13px;">Цена без акции:</span><span
-          style="color:rgba(255,255,255,0.4);font-size:18px;text-decoration:line-through;font-weight:600;">200
-          000 сум</span>
+        <span style="color:rgba(255,255,255,0.5);font-size:13px;">Цена без акции:</span>
+        <span style="color:rgba(255,255,255,0.4);font-size:18px;text-decoration:line-through;font-weight:600;">200 000
+          сум</span>
       </div>
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
-        <span style="color:var(--gold-light);font-size:13px;font-weight:700;">Ваша цена
-          сегодня:</span><span
-          style="font-family:'Playfair Display',serif;color:var(--gold);font-size:32px;font-weight:700;">149
-          000 сум</span>
+        <span style="color:var(--gold-light);font-size:13px;font-weight:700;">Ваша цена сегодня:</span>
+        <span style="font-family:'Playfair Display',serif;color:var(--gold);font-size:32px;font-weight:700;">149 000
+          сум</span>
       </div>
       <div
         style="background:rgba(201,169,110,0.1);border-radius:10px;padding:12px;text-align:center;color:var(--gold-light);font-size:13px;font-weight:700;">
-        🎁+3-я упаковка бесплатно при заказе 2 штук </div>
+        🎁 + 3-я упаковка бесплатно при заказе 2 штук
+      </div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:14px;"><input type="text"
-        placeholder="Ваше имя"
-        style="padding:15px 16px;border-radius:12px;border:1.5px solid rgba(201,169,110,0.4);background:rgba(255,255,255,0.07);color:white;font-family:'Nunito',sans-serif;font-size:15px;width:100%;outline:none;"><input
-        type="tel" placeholder="Номер телефона (+998)"
-        style="padding:15px 16px;border-radius:12px;border:1.5px solid rgba(201,169,110,0.4);background:rgba(255,255,255,0.07);color:white;font-family:'Nunito',sans-serif;font-size:15px;width:100%;outline:none;">
-    </div><a href="#" class="btn-cta" onclick="return false;" style="font-size:18px;padding:20px;">✅
-      ОФОРМИТЬ ЗАКАЗ СЕЙЧАС </a>
+
+    <!-- FINAL FORM -->
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:14px;">
+      <input id="finalName" type="text" placeholder="Ваше имя" class="form-input" autocomplete="name">
+      <input id="finalPhone" type="tel" placeholder="+998 __ ___ __ __" class="form-input" autocomplete="tel">
+    </div>
+
+    <button class="btn-cta" onclick="submitForm('finalName','finalPhone')" style="font-size:18px;padding:20px;">
+      ✅ ОФОРМИТЬ ЗАКАЗ СЕЙЧАС
+    </button>
     <p class="btn-sub">📞 Перезвоним в течение 15 минут · Оплата при получении</p>
   </section>
+
+  <!-- ═══════════════════════════════════════════
+     МОДАЛЬНОЕ ОКНО — ФОРМА ЗАКАЗА
+════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+    <div class="modal-box" id="modalBox">
+      <div class="modal-handle"></div>
+      <button class="modal-x" onclick="closeModal()">✕</button>
+
+      <!-- ФОРМА -->
+      <div id="formView">
+        <div class="modal-icon">🧖‍♀️</div>
+        <div class="modal-title display">Оформление заказа</div>
+        <div class="modal-sub">Заполните — оператор перезвонит в течение 15 минут</div>
+
+        <div class="modal-price-row">
+          <span class="modal-price-old">200 000 сум</span>
+          <span class="modal-price-new">149 000 сум</span>
+          <span class="modal-discount-badge">-50%</span>
+        </div>
+
+        <div class="modal-fields">
+          <div>
+            <label class="modal-label">Ваше имя</label>
+            <input id="modalName" type="text" placeholder="Например: Нилуфар" class="modal-input" autocomplete="name">
+            <div class="modal-err" id="errName">Введите имя</div>
+          </div>
+          <div>
+            <label class="modal-label">Номер телефона</label>
+            <input id="modalPhone" type="tel" placeholder="+998 90 123 45 67" class="modal-input" autocomplete="tel">
+            <div class="modal-err" id="errPhone">Введите корректный номер</div>
+          </div>
+        </div>
+
+        <button class="modal-submit" id="submitBtn" onclick="handleSubmit()">
+          ✅ ПОДТВЕРДИТЬ ЗАКАЗ
+        </button>
+        <div class="modal-note">Оплата при получении · Без предоплаты</div>
+      </div>
+
+      <!-- ЭКРАН УСПЕХА -->
+      <div id="successView" style="display:none;text-align:center;padding:10px 0 16px;">
+        <div class="success-circle">✓</div>
+        <div class="success-title display">Заказ принят!</div>
+        <div class="success-sub">Оператор перезвонит вам<br>в течение <strong>15 минут</strong></div>
+
+        <div class="success-steps">
+          <div class="success-step">
+            <span class="success-step-icon">📞</span>
+            <span>Ожидайте звонка оператора</span>
+          </div>
+          <div class="success-step">
+            <span class="success-step-icon">🚚</span>
+            <span>Доставка 1–2 дня по всему Узбекистану</span>
+          </div>
+          <div class="success-step">
+            <span class="success-step-icon">💰</span>
+            <span>Оплата только при получении</span>
+          </div>
+        </div>
+
+        <button class="success-close" onclick="closeModal()">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
   <footer>
     <div class="footer-logo">МАСКА ЛИФТ</div>
     <div class="footer-sub">Омолаживающая маска для шеи · Премиум качество</div>
-    <div class="footer-links"><a href="#">Условия доставки</a><a href="#">Возврат
-        товара</a><a href="#">Контакты</a></div>
-    <div class="footer-copy">© 2025 Маска ЛИФТ. Все права защищены. Доставка по всему
-      Узбекистану.</div>
+    <div class="footer-links">
+      <a href="#">Условия доставки</a>
+      <a href="#">Возврат товара</a>
+      <a href="#">Контакты</a>
+    </div>
+    <div class="footer-copy">© 2025 Маска ЛИФТ. Все права защищены. Доставка по всему Узбекистану.</div>
   </footer>
-  <a href="#" class="float-btn" id="floatBtn" onclick="return false;">🛒
-    ЗАКАЗАТЬ СО СКИДКОЙ -50% </a>
-  <script>
-    let totalSeconds = 5 * 3600 + 47 * 60 + 22;
 
+  <!-- FLOAT BUTTON -->
+  <button class="float-btn" id="floatBtn" onclick="openModal()">
+    🛒 ЗАКАЗАТЬ СО СКИДКОЙ -50%
+  </button>
+
+  <script>
+    // ─── COUNTDOWN TIMER ───
+    let totalSeconds = 5 * 3600 + 47 * 60 + 22;
     function updateTimer() {
       if (totalSeconds <= 0) return;
       totalSeconds--;
@@ -519,15 +656,15 @@
       document.getElementById('m').textContent = String(m).padStart(2, '0');
       document.getElementById('s').textContent = String(s).padStart(2, '0');
     }
-
     setInterval(updateTimer, 1000);
 
+    // ─── FLOAT BUTTON ───
     const floatBtn = document.getElementById('floatBtn');
-
     window.addEventListener('scroll', () => {
       floatBtn.style.display = window.scrollY > 500 ? 'block' : 'none';
     });
 
+    // ─── FAQ ACCORDION ───
     document.querySelectorAll('.faq-q').forEach(q => {
       q.addEventListener('click', () => {
         const item = q.parentElement;
@@ -537,16 +674,113 @@
       });
     });
 
+    // ─── SCROLL ANIMATIONS ───
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('visible');
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ─── MODAL ───
+    function openModal() {
+      const overlay = document.getElementById('modalOverlay');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      // сброс к форме
+      document.getElementById('formView').style.display = 'block';
+      document.getElementById('successView').style.display = 'none';
+      // очищаем поля и ошибки
+      ['modalName', 'modalPhone'].forEach(id => {
+        const el = document.getElementById(id);
+        el.value = '';
+        el.classList.remove('err', 'ok');
+      });
+      ['errName', 'errPhone'].forEach(id => {
+        document.getElementById(id).classList.remove('show');
       });
     }
 
-      , {
-        threshold: 0.1
-      });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function handleOverlayClick(e) {
+      if (e.target === document.getElementById('modalOverlay')) closeModal();
+    }
+
+    // закрытие по Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // ─── ВАЛИДАЦИЯ И ОТПРАВКА ───
+    function validate(nameId, phoneId) {
+      const name = document.getElementById(nameId);
+      const phone = document.getElementById(phoneId);
+      let ok = true;
+
+      // имя
+      if (name.value.trim().length < 2) {
+        name.classList.add('err'); name.classList.remove('ok');
+        const errEl = document.getElementById(nameId === 'modalName' ? 'errName' : 'errNameFinal');
+        if (errEl) errEl.classList.add('show');
+        ok = false;
+      } else {
+        name.classList.remove('err'); name.classList.add('ok');
+        const errEl = document.getElementById(nameId === 'modalName' ? 'errName' : 'errNameFinal');
+        if (errEl) errEl.classList.remove('show');
+      }
+
+      // телефон — минимум 9 цифр
+      const digits = phone.value.replace(/\D/g, '');
+      if (digits.length < 9) {
+        phone.classList.add('err'); phone.classList.remove('ok');
+        const errEl = document.getElementById(nameId === 'modalName' ? 'errPhone' : 'errPhoneFinal');
+        if (errEl) errEl.classList.add('show');
+        ok = false;
+      } else {
+        phone.classList.remove('err'); phone.classList.add('ok');
+        const errEl = document.getElementById(nameId === 'modalName' ? 'errPhone' : 'errPhoneFinal');
+        if (errEl) errEl.classList.remove('show');
+      }
+
+      return ok;
+    }
+
+    // Кнопка внутри модалки
+    function handleSubmit() {
+      if (!validate('modalName', 'modalPhone')) return;
+      showSuccess();
+    }
+
+    // Форма на странице (hero / финальная)
+    function submitForm(nameId, phoneId) {
+      if (!validate(nameId, phoneId)) return;
+      openModal();
+      // небольшая задержка чтобы модалка успела открыться, потом сразу успех
+      setTimeout(showSuccess, 80);
+    }
+
+    function showSuccess() {
+      document.getElementById('formView').style.display = 'none';
+      document.getElementById('successView').style.display = 'block';
+    }
+
+    // ─── МАСКА ТЕЛЕФОНА ───
+    function phoneMask(e) {
+      let v = e.target.value.replace(/\D/g, '');
+      if (v.startsWith('998')) v = v.slice(3);
+      if (v.length > 9) v = v.slice(0, 9);
+      let out = '+998';
+      if (v.length > 0) out += ' ' + v.slice(0, 2);
+      if (v.length > 2) out += ' ' + v.slice(2, 5);
+      if (v.length > 5) out += ' ' + v.slice(5, 7);
+      if (v.length > 7) out += ' ' + v.slice(7, 9);
+      e.target.value = out === '+998' ? '' : out;
+    }
+    document.querySelectorAll('input[type=tel]').forEach(el => {
+      el.addEventListener('input', phoneMask);
+    });
   </script>
 </body>
 

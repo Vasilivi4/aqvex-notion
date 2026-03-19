@@ -1,0 +1,45 @@
+.form-input {
+    padding: 15px 16px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(201, 169, 110, 0.4);
+    background: rgba(255, 255, 255, 0.07);
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.form-input:focus {
+    border-color: var(--gold);
+}
+
+.form-input.err {
+    border-color: #FF5252;
+    animation: shake2 0.3s ease;
+}
+
+.form-input.ok {
+    border-color: #4CAF50;
+}
+
+@keyframes shake2 {
+
+    0%,
+    100% {
+        transform: translateX(0)
+    }
+
+    25% {
+        transform: translateX(-6px)
+    }
+
+    75% {
+        transform: translateX(6px)
+    }
+}

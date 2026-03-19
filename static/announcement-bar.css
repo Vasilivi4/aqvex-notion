@@ -1,0 +1,22 @@
+.announce-bar {
+    background: var(--dark);
+    color: var(--gold-light);
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    animation: pulse-bg 3s infinite;
+}
+
+@keyframes pulse-bg {
+
+    0%,
+    100% {
+        background: var(--dark);
+    }
+
+    50% {
+        background: #2C1F0A;
+    }
+}
